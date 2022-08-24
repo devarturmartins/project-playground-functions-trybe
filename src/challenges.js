@@ -92,16 +92,35 @@ function fizzBuzz(arrayNumberFizz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+ let newStringCode = stringEncode.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+ return newStringCode;
 }
-function decode() {
-  // seu código aqui
+  
+function decode(stringDecode) {
+  let newStringDecode = stringDecode.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u");
+ return newStringDecode;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, clienteTech) {
+  let ordenaNomesArray = arrayTech.sort;
+  let ordenaNomesClientes = clienteTech.sort;
+  let result = [];
+  if((arrayTech.length === 0) && (clienteTech.length === 0)){
+    return 'Vazio!';
+  }
+  else {
+    for (i in ordenaNomesArray){
+      let objetos = {
+        arrayTech: ordenaNomesArray,
+        clienteTech: ordenaNomesClientes
+      }
+    
+    }
+    result.push(objetos);
+  }
+  return result;
 }
 
 module.exports = {
