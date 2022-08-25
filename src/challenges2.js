@@ -33,13 +33,28 @@ function generatePhoneNumber(arrayPhone) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+ condTriang = false;
+  if((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))  || ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) || ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB)))){
+    condTriang = true;
+  }
+  return condTriang;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringBar) {
+  let stringAgua = stringBar.replace(/[0-9]/g, '');
+  let cont = 0;
+  let soma = 0;
+  console.log(stringAgua);
+  for (i in stringAgua){
+    cont = stringAgua[i];
+    if(cont > 0){
+      soma += cont;
+    }
+  }
+  let string = soma + ' copos de água';
+  return string;
 }
 
 module.exports = {
