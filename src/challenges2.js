@@ -43,18 +43,17 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(stringBar) {
-  let stringAgua = stringBar.replace(/[0-9]/g, '');
-  let cont = 0;
+  let stringAgua = stringBar.match((/\d+/g));
   let soma = 0;
-  console.log(stringAgua);
-  for (i in stringAgua){
-    cont = stringAgua[i];
-    if(cont > 0){
-      soma += cont;
-    }
+  for (let i = 0; i < stringAgua.length; i+= 1){
+    soma += parseInt(stringAgua[i]);
   }
-  let string = soma + ' copos de água';
-  return string;
+  if(soma === 1){
+    return soma + ' copo de água';
+  }
+  if(soma > 1){
+    return soma + ' copos de água';
+  }
 }
 
 module.exports = {
