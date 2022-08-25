@@ -104,22 +104,19 @@ function decode(stringDecode) {
 
 // Desafio 10
 function techList(arrayTech, clienteTech) {
-  let ordenaNomesArray = arrayTech.sort;
-  let ordenaNomesClientes = clienteTech.sort;
+  let tech = arrayTech.sort();
+  let name = clienteTech;
   let result = [];
-  if((arrayTech.length === 0) && (clienteTech.length === 0)){
+  if(arrayTech.length === 0){
     return 'Vazio!';
   }
-  else {
-    for (i in ordenaNomesArray){
-      let objetos = {
-        arrayTech: ordenaNomesArray,
-        clienteTech: ordenaNomesClientes
-      }
-    
+    for (let i = 0; i < tech.length; i += 1){
+      let armazenaObj = {
+        tech: tech[i],
+        name: name
+      };
+      result.push(armazenaObj);
     }
-    result.push(objetos);
-  }
   return result;
 }
 
